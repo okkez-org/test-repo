@@ -1,0 +1,21 @@
+name: webhook
+
+on:
+  workflow_dispatch:
+
+repository_dispatch:
+  types:
+    - webhook
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run echo
+        run: echo Hello!
+      - name: Run multiline
+        run: |
+          echo Hello2
+          echo Hello3
