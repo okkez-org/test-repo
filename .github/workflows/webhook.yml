@@ -3,9 +3,9 @@ name: webhook
 on:
   workflow_dispatch:
 
-repository_dispatch:
-  types:
-    - webhook
+  repository_dispatch:
+    types:
+      - webhook
 
 jobs:
   build:
